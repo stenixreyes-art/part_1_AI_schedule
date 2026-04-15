@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
-import
+import 'package:google_generative_ai/google_generative_ai.dart';
+import '../models/task_model.dart';
+import '../models/schedule_analysis.dart';
 
 
 
@@ -12,7 +16,7 @@ class AiScheduleService extends ChangeNotifier {
 
   final String _apiKey = '';
 
-  ScheduleAnalysis? get currentAnalysis => _curremtAnalysis;
+  ScheduleAnalysis? get currentAnalysis => _currentAnalysis;
   bool get isLoading => _isLoading;
   String? get errorMessage => errorMessage;
 
